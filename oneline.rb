@@ -7,6 +7,16 @@
 # Print a message (laaame)
 puts "Hello World!"
 
+# Cheer up on Fridays
+puts "Hooray!" if Date.today.friday?
+
+# Swap two objects
+one, two = two, one
+
+# Print an array as a numbered list
+list = %w[this is not a long list]
+puts list.each_with_index.map { |w,i| "#{i}. #{w}" }
+
 # Find the inner product of two vectors:
 v1 = [6, 4, -1]
 v2 = [-9, 0, 1]
