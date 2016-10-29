@@ -67,4 +67,4 @@ fibonacci = Hash.new { |h, i| h[i] = h[i - 2] + h[i - 1] }.update(0 => 0, 1 => 1
 ################################################################################
 # 10. Display a file by blocks, as a presentation                              #
 ################################################################################
-File.read('oneline.rb').split("\n\n").each { |b| puts b.gsub(/^(#.*?)$/, '\1 '.on_cyan); gets; system "clear" }
+File.read('oneline.rb').split("\n\n").each { |b| puts `clear`+b.gsub(/^(#.*?)$/, '\1 '.on_cyan); gets }
