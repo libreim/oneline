@@ -51,10 +51,10 @@ WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start
 
 ################################################################################
 # 8. Search the next solution of the First Ascent hill-climbing algorithm      #
-#   This was actually implemented in https://git.io/vPxQ6                      #
-#   but changed in later versions                                              #
 ################################################################################
 solution.neighborhood.detect { |attempt, fitness| fitness > @current_fitness }
+# This was actually implemented in https://git.io/vPxQ6                        #
+# but changed in later versions                                                #
 
 ################################################################################
 # 9. Generate a Hash that calculates the Fibonacci sequence                    #
