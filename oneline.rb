@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/bin/ruby
+require "colorize"
 # This is a hacky way of just executing the last line of the file in Ruby
-ruby -e "$(tail $0 -n1)" -rcolorize
-exit 0
+eval File.readlines(__FILE__).last
+exit
 
 ################################################################################
 #                                                                              #
@@ -72,4 +73,4 @@ fibonacci = Hash.new { |h, i| h[i] = h[i - 2] + h[i - 1] }.update(0 => 0, 1 => 1
 ################################################################################
 # 10. Display a file by blocks, as a presentation                              #
 ################################################################################
-File.read('oneline.rb').split("\n\n").each { |b| puts `clear`+b.gsub(/^(#.*?)$/, '\1 '.on_cyan); gets }
+File.read("oneline.rb").gsub(/^(#.*?)$/, '\1'.on_red).white.split("\n\n").each { |b| puts `clear`+b; gets }
