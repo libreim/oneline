@@ -8,9 +8,9 @@
 * Mostrar que Ruby es un lenguaje interpretado
 * No hay función main
 
-## Swap two objects
+## Multiple assignments
 
-* Varias asignaciones en una línea
+* Intercambiar objetos sin variables temporales
 * Tal vez explicar *splats*
 
 ## Cheer up on Fridays
@@ -31,6 +31,9 @@
 
 * Método `zip`
 * Método `inject`
+
+## Bonus: check primality
+* Encontrar el error
 
 ## Create your own type of exception
 
