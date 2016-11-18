@@ -1,6 +1,6 @@
 #!/bin/ruby
 require "colorize"
-#----------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------
 # This is a hacky way of just executing the last line of the file in Ruby
 eval File.readlines(__FILE__).last
 exit
@@ -20,9 +20,9 @@ puts "Hello World!"
 # 2. Do multiple assignments                                                   #
 ################################################################################
 one, two, three = 1, 2, 3
-# In particular, swap two variables and some Haskell-style pattern matching    #
-one, two = two, one
-x, *xs = [1, 2, 3, 4]
+# In particular, swap two variables and some Haskell-style pattern matching:   #
+#   one, two = two, one                                                        #
+#   x, *xs = [1, 2, 3, 4]                                                      #
 
 ################################################################################
 # 3. Cheer up on Fridays                                                       #
@@ -41,7 +41,7 @@ puts list.each_with_index.map { |w,i| "#{i}. #{w}" }
 v1 = [6, 4, -1]
 v2 = [-9, 0, 1]
 inner_product = v1.zip(v2).inject(0) { |p, (n, m)| p + n * m }
-# result: -55                                                                  #
+#=> -55                                                                        #
 
 ################################################################################
 # BONUS! Check primality                                                       #
@@ -77,4 +77,4 @@ fibonacci = Hash.new { |h, i| h[i] = h[i - 2] + h[i - 1] }.update(0 => 0, 1 => 1
 ################################################################################
 # 10. Display a file by blocks, as a presentation                              #
 ################################################################################
-File.read("oneline.rb").gsub(/^(#.*?)$/, '\1'.on_red).white.split("\n\n").each { |b| puts `clear`+b; gets }
+File.read($0).gsub(/^(#.*?)$/, '\1'.on_red).white.split("\n\n").each { |b| puts `clear`+b; gets }
